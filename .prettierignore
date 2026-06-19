@@ -1,0 +1,11 @@
+*.env
+
+.env
+
+/.vscode
+
+.gitignore
+
+/node_modules
+
+.env.*
