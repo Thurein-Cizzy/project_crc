@@ -1,6 +1,16 @@
 import mongoose from "mongoose";
 import { DB_NAME } from "../constants.js";
 
+
+// import util from "util";
+//  console.log(
+//     util.inspect(connectionInstance, {
+//         showHidden: false,
+//         depth: null,
+//         colors: true,
+//     })
+//     );
+
 const connectDB = async () => 
 {
     try
@@ -8,6 +18,7 @@ const connectDB = async () =>
         const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
         console.log(`Mongodb database is successfully connected on host : 
             ${connectionInstance}`);
+ 
     }
     catch(error)
     {
